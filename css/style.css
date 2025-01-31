@@ -340,8 +340,8 @@ span {
   text-align: center;
   border-top: 0.6rem solid var(--main-color);
   border-bottom: 0.6rem solid var(--main-color);
-  border-left: 0.1rem solid rgb(187, 187, 187);
-  border-right: 0.1rem solid rgb(187, 187, 187);
+  border-left: 0.05rem solid rgb(210, 209, 209);
+  border-right: 0.05rem solid rgb(210, 209, 209);
   min-height: 400px; /* Add this line */
   display: flex; /* Add this line */
   flex-direction: column; /* Add this line */
@@ -450,4 +450,67 @@ span {
 .projects-layer a i {
   font-size: 2rem;
   color: #333;
+}
+
+/* ------------------------certifications section ------------------------ */
+
+.certifications-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 5rem 1rem;
+}
+
+.certifications-container .certifications-wrapper {
+  position: relative;
+  max-width: 80rem;
+  width: 100%;
+  padding: 5rem;
+}
+
+.certifications-wrapper .certifications-box {
+  padding: 1rem;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.certifications-content .certifications-slide {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: var(--bg-color);
+  border-radius: 2rem;
+  box-shadow: 0 0.1 0.5rem var(--shadow-color);
+  padding: 3rem 5rem;
+  border-top: 0.6rem solid var(--main-color);
+  border-bottom: 0.6rem solid var(--main-color);
+  border-left: 0.05rem solid rgb(210, 209, 209);
+  border-right: 0.05rem solid rgb(210, 209, 209);
+}
+.certifications-slide img {
+  height: 70%;
+  width: 80%;
+  object-fit: cover;
+}
+
+.certifications-box .swiper-button-next,
+.certifications-box .swiper-button-prev {
+  color: var(--main-color);
+}
+
+.certifications-box .swiper-button-next {
+  right: 0;
+}
+
+.certifications-box .swiper-button-prev {
+  left: 0;
+}
+
+.certifications-box .swiper-pagination-bullet {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.certifications-box .swiper-pagination-bullet-active {
+  background: var(--main-color);
 }
