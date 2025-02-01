@@ -80,3 +80,27 @@ ScrollReveal().reveal(".home-content h1, .about-img img", { origin: "left" });
 ScrollReveal().reveal(".home-content h3, .home-content p, .about-content", {
   origin: "right",
 });
+
+// Form submission handling
+document.getElementById("contactForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const formData = new FormData(e.target);
+
+  try {
+    const response = await fetch("contact.php", {
+      method: "POST",
+      body: formData,
+    });
+
+    if (response.ok) {
+      alert("Message sent successfully!");
+      e.target.reset();
+    } else {
+      throw new Error("Failed to send message");
+    }
+  } catch (error) {
+    alert("Error sending message. Please try again later.");
+    console.error("Error:", error);
+  }
+});
