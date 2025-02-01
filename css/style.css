@@ -14,7 +14,8 @@
 :root {
   --bg-color: #fdfdfd;
   --text-color: #333;
-  --main-color: #754ef9;
+  /* --main-color: #754ef9; */
+  --main-color: #00897b;
   --white-color: #fdfdfd;
   --shadow-color: rgba(0, 0, 0, 0.2);
   --text-light: #6b7280;
@@ -25,6 +26,8 @@
   --bg-color: #0b061f;
   --text-color: #fdfdfd;
   --shadow-color: rgba(0, 0, 0, 0.7);
+  --text-light: #9ca3af; /* Lighter gray for dark mode */
+  --bg-light: #1f2937; /* Darker background for dark mode */
 }
 
 html {
@@ -141,9 +144,10 @@ section {
 }
 
 .home-content h1 {
-  font-size: 5.6rem;
-  font-weight: 700;
+  font-size: 5.3rem; /* Reduced from 5.6rem */
+  font-weight: 800;
   margin-bottom: 0.3rem;
+  white-space: nowrap;
 }
 
 .home-content p {
@@ -296,8 +300,8 @@ section {
 
 .home-img img {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: -37px;
+  right: -50px;
   width: auto; /* Changed from 100% to auto */
   max-height: 90vh; /* Added to maintain viewport height */
   max-width: 50%; /* Added to prevent image from being too wide */
@@ -319,7 +323,9 @@ span {
 }
 
 .about-img img {
-  width: 40vw;
+  width: 30vw; /* Reduced from 40vw to make the image smaller */
+  height: auto; /* Added to maintain aspect ratio */
+  object-fit: contain;
 }
 
 .heading {
@@ -375,7 +381,8 @@ span {
   border-bottom: 0.6rem solid var(--main-color);
   border-left: 0.05rem solid rgb(210, 209, 209);
   border-right: 0.05rem solid rgb(210, 209, 209);
-  min-height: 400px; /* Add this line */
+  min-height: 300px; /* Reduced from 400px */
+  height: 300px; /* Added to force same height */
   display: flex; /* Add this line */
   flex-direction: column; /* Add this line */
   justify-content: space-between;
@@ -403,6 +410,73 @@ span {
 .services-box p {
   font-size: 1.6rem;
   margin: 1rem 0 3rem;
+}
+/* ---------------------skills section --------------------- */
+
+.skills {
+  min-height: auto;
+  padding-bottom: 7rem;
+  background: var(--second-bg-color);
+}
+
+.skills h2 {
+  margin-bottom: 4rem;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2.5rem;
+  padding: 0 9%;
+}
+
+.skills-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 1rem var(--bg-color);
+  background: var(--bg-color);
+  transition: 0.5s ease;
+}
+
+.skills-box:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 2rem var(--main-color);
+}
+
+.skills-box i {
+  font-size: 4rem;
+  color: var(--main-color);
+  margin-bottom: 1rem;
+}
+
+.skills-box h3 {
+  font-size: 1.6rem;
+  color: var(--text-color);
+}
+
+/* Add responsive design for smaller screens */
+@media (max-width: 768px) {
+  .skills-container {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    padding: 0 4%;
+  }
+
+  .skills-box {
+    padding: 1.5rem;
+  }
+
+  .skills-box i {
+    font-size: 3rem;
+  }
+
+  .skills-box h3 {
+    font-size: 1.4rem;
+  }
 }
 
 /* ------------------------project section ------------------------ */
