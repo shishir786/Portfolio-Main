@@ -361,20 +361,18 @@
         <h2 class="heading">Contact <span>Me!</span></h2>
 
         <form id="contactForm">
-
             <div class="input-box">
                 <input type="text" id="name" name="name" placeholder="Full Name" required>
             </div>
             <div class="input-box">
                 <input type="email" id="email" name="email" placeholder="Email Address" required>
             </div>
-
             <div class="input-box">
                 <textarea id="message" name="message" placeholder="Your Message" cols="30" rows="8" required></textarea>
             </div>
-
             <button type="submit" class="btn btn-primary">Send Message</button>
         </form>
+
 
         <div class="contact-links">
             <a href="mailto:abdullahshishir786@gmail.com" class="contact-link">
@@ -441,6 +439,39 @@
 
     <!-- custom js -->
     <script src="js/script.js"></script>
+
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", async function (e) {
+            e.preventDefault(); // Prevent default form submission
+
+            // Collect form data and convert it to a JSON object
+            const formData = new FormData(this);
+            const jsonData = Object.fromEntries(formData.entries());  // Converts form data to a JSON object
+
+            // Log form data for debugging
+            console.log("Form Data:", jsonData);  // Make sure data is captured correctly
+
+            try {
+                const response = await fetch("/api/contact", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",  // Set content-type to JSON
+                    },
+                    body: JSON.stringify(jsonData),  // Send form data as JSON
+                });
+
+                const result = await response.json();  // Parse JSON response from the server
+                console.log("API Response:", result); // Log API response for debugging
+
+                // Display success or error message
+                alert(result.message || result.error);
+            } catch (error) {
+                console.error("Error:", error);  // Log any errors that occur during fetch
+            }
+        });
+    </script>
+
 </body>
 
 </html>

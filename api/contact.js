@@ -1,6 +1,9 @@
 import nodemailer from "nodemailer";
 
 export default async function handler(req, res) {
+  console.log("Request method:", req.method); // Log the HTTP method (POST)
+  console.log("Request body:", req.body); // Log the body of the request
+
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method Not Allowed" });
   }
@@ -11,16 +14,18 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: "All fields are required" });
   }
 
+  console.log("Parsed data:", { name, email, message }); // Log parsed data
+
   if (!/\S+@\S+\.\S+/.test(email)) {
     return res.status(400).json({ error: "Invalid email format" });
   }
 
-  // Configure Nodemailer with your SMTP credentials
+  // Set up Nodemailer transporter
   const transporter = nodemailer.createTransport({
     service: "Gmail",
     auth: {
-      user: process.env.EMAIL_USER, // Your Gmail email
-      pass: process.env.EMAIL_PASS, // Your Gmail App Password
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
     },
   });
 
@@ -41,6 +46,7 @@ export default async function handler(req, res) {
     await transporter.sendMail(mailOptions);
     return res.status(200).json({ message: "Message sent successfully" });
   } catch (error) {
+    console.error("Error sending email:", error); // Log the error
     return res.status(500).json({ error: "Failed to send email" });
   }
 }
