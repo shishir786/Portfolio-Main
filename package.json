@@ -18,6 +18,6 @@
   "homepage": "https://github.com/shishir786/portfolio_final#readme",
   "description": "",
   "dependencies": {
-    "nodemailer": "^6.10.0"
+    "postmark": "^4.0.5"
   }
 }

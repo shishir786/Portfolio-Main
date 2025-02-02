@@ -442,34 +442,39 @@
 
 
     <script>
-        document.getElementById("contactForm").addEventListener("submit", async function (e) {
-            e.preventDefault(); // Prevent default form submission
+        document.getElementById('contactForm').addEventListener('submit', async function (event) {
+            event.preventDefault();  // Prevent the form from submitting normally
 
-            // Collect form data and convert it to a JSON object
-            const formData = new FormData(this);
-            const jsonData = Object.fromEntries(formData.entries());  // Converts form data to a JSON object
+            const formData = new FormData(this);  // Create a FormData object from the form
 
-            // Log form data for debugging
-            console.log("Form Data:", jsonData);  // Make sure data is captured correctly
+            const data = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                message: formData.get('message'),
+            };
 
             try {
-                const response = await fetch("/api/contact", {
-                    method: "POST",
+                const response = await fetch('/api/send-email', {
+                    method: 'POST',
                     headers: {
-                        "Content-Type": "application/json",  // Set content-type to JSON
+                        'Content-Type': 'application/json',
                     },
-                    body: JSON.stringify(jsonData),  // Send form data as JSON
+                    body: JSON.stringify(data),
                 });
 
-                const result = await response.json();  // Parse JSON response from the server
-                console.log("API Response:", result); // Log API response for debugging
+                const result = await response.json();
 
-                // Display success or error message
-                alert(result.message || result.error);
+                if (response.ok) {
+                    alert('Message sent successfully!');
+                } else {
+                    alert(result.error || 'Failed to send message.');
+                }
             } catch (error) {
-                console.error("Error:", error);  // Log any errors that occur during fetch
+                console.error('Error:', error);
+                alert('Something went wrong. Please try again.');
             }
         });
+
     </script>
 
 </body>

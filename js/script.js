@@ -80,22 +80,3 @@ ScrollReveal().reveal(".home-content h1, .about-img img", { origin: "left" });
 ScrollReveal().reveal(".home-content h3, .home-content p, .about-content", {
   origin: "right",
 });
-
-// Form submission handling
-document
-  .getElementById("contactForm")
-  .addEventListener("submit", async function (e) {
-    e.preventDefault();
-
-    const formData = new FormData(this);
-    const jsonData = Object.fromEntries(formData.entries());
-
-    const response = await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(jsonData),
-    });
-
-    const result = await response.json();
-    alert(result.message);
-  });
