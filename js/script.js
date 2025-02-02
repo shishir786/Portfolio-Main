@@ -82,25 +82,20 @@ ScrollReveal().reveal(".home-content h3, .home-content p, .about-content", {
 });
 
 // Form submission handling
-document.getElementById("contactForm").addEventListener("submit", async (e) => {
-  e.preventDefault();
+document
+  .getElementById("contactForm")
+  .addEventListener("submit", async function (e) {
+    e.preventDefault();
 
-  const formData = new FormData(e.target);
+    const formData = new FormData(this);
+    const jsonData = Object.fromEntries(formData.entries());
 
-  try {
-    const response = await fetch("contact.php", {
+    const response = await fetch("/api/contact", {
       method: "POST",
-      body: formData,
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(jsonData),
     });
 
-    if (response.ok) {
-      alert("Message sent successfully!");
-      e.target.reset();
-    } else {
-      throw new Error("Failed to send message");
-    }
-  } catch (error) {
-    alert("Error sending message. Please try again later.");
-    console.error("Error:", error);
-  }
-});
+    const result = await response.json();
+    alert(result.message);
+  });
