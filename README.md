@@ -1,6 +1,20 @@
 # My Portfolio Website
 
-Welcome to my portfolio website! This repository contains the source code of my personal site, which is hosted on Vercel.
+Welcome to my portfolio website! This repository contains the source code of my personal site, which is hosted on Vercel. </br>
+Portfolio link: https://abdullahshishirportfolio.vercel.app/
+
+Visuals:
+![image](https://github.com/user-attachments/assets/f8dd6dda-0f38-4353-b880-b9e9e20e13ff)
+![image](https://github.com/user-attachments/assets/9bd7537c-9895-4e7b-9de5-26e810bc8a24)
+![image](https://github.com/user-attachments/assets/85bcf6b0-4a2e-4d37-a9a1-71b2a97f4071)
+![image](https://github.com/user-attachments/assets/d525700d-a748-43c3-8c55-9962c21bbf63)
+![image](https://github.com/user-attachments/assets/9a5f55ec-71d1-41d3-a365-7c87b4363328)
+![image](https://github.com/user-attachments/assets/68f6ba9a-b64e-49ec-b1af-e8504f33fb84)
+
+
+
+
+
 
 ## Forking and Customization
 
