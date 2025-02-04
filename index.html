@@ -105,7 +105,7 @@
 
     <section class="about" id="about">
         <div class="about-img">
-            <img src="images/about.png" alt="">
+            <img src="images/about.jpg" alt="">
         </div>
 
 
@@ -368,8 +368,12 @@
                 <input type="email" id="email" name="email" placeholder="Email Address" required>
             </div>
             <div class="input-box">
-                <textarea id="message" name="message" placeholder="Your Message" cols="30" rows="8" required></textarea>
+                <input type="text" id="subject" name="subject" placeholder="Subject" required>
             </div>
+            <div class="input-box">
+                <textarea id="message" name="message" placeholder="Your Message" cols="30" rows="6" required></textarea>
+            </div>
+
             <p id="my-form-status"></p>
             <button type="submit" class="btn btn-primary" id="check">Send Message</button>
         </form>
@@ -456,7 +460,7 @@
                 }
             }).then(response => {
                 if (response.ok) {
-                    status.innerHTML = "Thanks for your submission!";
+                    status.innerHTML = "Thanks for Contacting Me !!";
                     form.reset()
                 } else {
                     response.json().then(data => {

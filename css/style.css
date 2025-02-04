@@ -323,7 +323,7 @@ span {
 }
 
 .about-img img {
-  width: 30vw; /* Reduced from 40vw to make the image smaller */
+  width: 23vw; /* Reduced from 40vw to make the image smaller */
   height: auto; /* Added to maintain aspect ratio */
   object-fit: contain;
 }
