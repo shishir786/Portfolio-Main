@@ -17,18 +17,17 @@ Please follow these steps after forking the repository:
 1. Go to [Formspree](https://formspree.io/) and create a free account if you haven't already.
 2. After logging in, create a new form and obtain the unique token.
 3. In the `index.html` file, find the following code:
+   ```html
+    <form action="https://formspree.io/f/######" method="POST" id="contactForm"></form>
+    ```
+    Replace the token `######` with your newly obtained Formspree token.
 
-```html
-<form
-  action="https://formspree.io/f/######"
-  method="POST"
-  id="contactForm"
-></form>
-```
 
-Replace the token `######` with your newly obtained Formspree token.
 
-4. For a fresh start from scratch download the zip file and after extract use the template folder, it will be very helpful.</br> Template :
-   [Complete Responsive Portfolio Template.zip](https://github.com/user-attachments/files/18668120/Complete.Responsive.Portfolio.Template.zip)
+  
 
-Thank you for your interest in my work!
+5. For a fresh start from scratch download the zip file and after extract use the template folder, it will be very helpful.</br> Download Template :
+[Responsive Portfolio Template.zip](https://github.com/user-attachments/files/18668431/Responsive.Portfolio.Template.zip)
+
+
+### Thank you for your interest in my work!
