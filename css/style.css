@@ -27,7 +27,7 @@
   --text-color: #fdfdfd;
   --shadow-color: rgba(0, 0, 0, 0.7);
   --text-light: #9ca3af; /* Lighter gray for dark mode */
-  --bg-light: #1f2937; /* Darker background for dark mode */
+  --bg-light: ; /* Darker background for dark mode */
 }
 
 html {
@@ -38,6 +38,18 @@ html {
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
+}
+
+/*========== SCROLL BAR ==========*/
+::-webkit-scrollbar {
+  width: 0.6rem;
+  background-color: #d7d7d7;
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #1f2937;
+  border-radius: 0.5rem;
 }
 
 /* ------------------------header section ------------------------ */

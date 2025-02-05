@@ -4,13 +4,13 @@ Welcome to my portfolio website! This repository contains the source code of my 
 Portfolio link: https://abdullahshishirportfolio.vercel.app/
 
 Visuals:
-![image](https://github.com/user-attachments/assets/f8dd6dda-0f38-4353-b880-b9e9e20e13ff)
-![image](https://github.com/user-attachments/assets/9bd7537c-9895-4e7b-9de5-26e810bc8a24)
+![preview img](/PreviewLight.png)
 
+![preview img](/PreviewDark.png)
 
 ## Forking and Customization
 
-On my site, I've included a contacts section that uses a Formspree form to handle emails sent by users. 
+On my site, I've included a contacts section that uses a Formspree form to handle emails sent by users.
 
 Please follow these steps after forking the repository:
 
@@ -19,11 +19,16 @@ Please follow these steps after forking the repository:
 3. In the `index.html` file, find the following code:
 
 ```html
-<form action="https://formspree.io/f/######" method="POST" id="contactForm">
+<form
+  action="https://formspree.io/f/######"
+  method="POST"
+  id="contactForm"
+></form>
 ```
-  Replace the token `######` with your newly obtained Formspree token.
 
-4. For a fresh start from scratch download the zip file and after extract use the template folder, it will be very helpful.</br> Template : 
-[Complete Responsive Portfolio Template.zip](https://github.com/user-attachments/files/18668120/Complete.Responsive.Portfolio.Template.zip)
+Replace the token `######` with your newly obtained Formspree token.
+
+4. For a fresh start from scratch download the zip file and after extract use the template folder, it will be very helpful.</br> Template :
+   [Complete Responsive Portfolio Template.zip](https://github.com/user-attachments/files/18668120/Complete.Responsive.Portfolio.Template.zip)
 
 Thank you for your interest in my work!
