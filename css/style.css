@@ -14,20 +14,20 @@
 :root {
   --bg-color: #fffafa;
   --text-color: #333;
-  /* --main-color: #754ef9; */
-  --main-color: #059889;
+  --main-color: #059889; /* Teal accent */
   --white-color: #fdfdfd;
   --shadow-color: rgba(0, 0, 0, 0.2);
-  --text-light: #6b7280;
-  --bg-light: #f3f4f6;
+  --text-light: #6b7280; /* Light gray for secondary text */
+  --bg-light: #f3f4f6; /* Light background for cards */
 }
 
 .dark-mode {
   --bg-color: #0b061f;
   --text-color: #fdfdfd;
+  --main-color: #e36414; /* Orange accent for dark mode */
   --shadow-color: rgba(0, 0, 0, 0.7);
   --text-light: #9ca3af; /* Lighter gray for dark mode */
-  --bg-light: ; /* Darker background for dark mode */
+  --bg-light: #1f2937; /* Darker background for cards in dark mode */
 }
 
 html {
@@ -600,17 +600,28 @@ span {
   flex-direction: column;
   background: var(--bg-color);
   border-radius: 2rem;
-  box-shadow: 0 0.1 0.5rem var(--shadow-color);
-  padding: 3rem 5rem;
+  box-shadow: 0 0.1rem 0.5rem var(--shadow-color);
+  padding: 3rem 2rem; /* Reduced horizontal padding for better spacing */
   border-top: 0.6rem solid var(--main-color);
   border-bottom: 0.6rem solid var(--main-color);
   border-left: 0.05rem solid rgb(210, 209, 209);
   border-right: 0.05rem solid rgb(210, 209, 209);
+  text-align: center; /* Center-align text for descriptions */
 }
+
 .certifications-slide img {
-  height: 70%;
-  width: 80%;
+  height: auto; /* Adjusted to maintain aspect ratio */
+  width: 80%; /* Ensure images scale properly */
   object-fit: cover;
+  margin-bottom: 1rem; /* Add space between image and description */
+}
+
+.certifications-slide .certification-description {
+  font-size: 1rem; /* Adjust font size for readability */
+  color: var(--text-color); /* Use a variable for consistent text color */
+  line-height: 1.5; /* Improve readability with proper line height */
+  margin: 0; /* Remove default margins */
+  padding: 0 1rem; /* Add horizontal padding for better spacing */
 }
 
 .certifications-box .swiper-button-next,
@@ -627,7 +638,7 @@ span {
 }
 
 .certifications-box .swiper-pagination-bullet {
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(49, 246, 88, 0.8);
 }
 
 .certifications-box .swiper-pagination-bullet-active {

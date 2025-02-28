@@ -71,7 +71,9 @@ ScrollReveal({
   duration: 2000,
   delay: 200,
 });
-ScrollReveal().reveal(".home-content, .heading", { origin: "top" });
+ScrollReveal().reveal(".home-content, .heading, .contact-links", {
+  origin: "top",
+});
 ScrollReveal().reveal(
   ".home-img img, .services-container, .projects-box, .certifications-wrapper, .contact form, .skills-box",
   { origin: "bottom" }
