@@ -182,11 +182,58 @@ section {
   color: var(--main-color);
   margin: 2.5rem 1.5rem 3rem 0;
   transition: 0.5s ease;
+  position: relative; /* Added for tooltip positioning */
+  text-decoration: none; /* Ensure no underline on links */
 }
 
 .home-content .social-media a:hover {
   background: var(--main-color);
   color: var(--white-color);
+}
+
+/* Tooltip container */
+.home-content .social-media a.tooltip {
+  position: relative; /* Ensure tooltips are positioned relative to the icon */
+}
+
+/* Tooltip text */
+.home-content .social-media a.tooltip .tooltiptext {
+  visibility: hidden;
+  width: auto; /* Adjust width based on content */
+  min-width: 8rem; /* Minimum width for consistency */
+  background-color: var(--main-color); /* Match tooltip color with main color */
+  color: var(--white-color); /* White text for contrast */
+  text-align: center;
+  border-radius: 2rem; /* More rounded shape */
+  padding: 0.75rem 1.5rem; /* Increased padding for larger tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Position above the icon */
+  left: 50%;
+  transform: translateX(-50%); /* Center the tooltip horizontally */
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  font-size: 1.25rem; /* Larger font size */
+  white-space: nowrap; /* Prevent text wrapping */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); /* Add subtle shadow for depth */
+}
+
+/* Show tooltip on hover */
+.home-content .social-media a.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Arrow for tooltip */
+.home-content .social-media a.tooltip .tooltiptext::after {
+  content: ""; /* Required for pseudo-element */
+  position: absolute;
+  top: 100%; /* Position at the bottom of the tooltip */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Fine-tune horizontal alignment */
+  border-width: 0.6rem; /* Size of the arrow */
+  border-style: solid; /* Create the arrow using borders */
+  border-color: var(--main-color) transparent transparent transparent; /* Arrow color matches tooltip */
 }
 
 .btn {
