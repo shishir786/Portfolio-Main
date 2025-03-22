@@ -1,14 +1,28 @@
 {
+  "name": "portfolio-website",
+  "version": "1.0.0",
+  "description": "Welcome to my portfolio website! This repository contains the source code of my personal site, which is hosted on Vercel. </br>\r Portfolio link: https://abdullahshishirportfolio.vercel.app/",
+  "main": "sw.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm ci && webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shishir786/Portfolio-Main.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shishir786/Portfolio-Main/issues"
+  },
+  "homepage": "https://github.com/shishir786/Portfolio-Main#readme",
   "devDependencies": {
     "css-loader": "^7.1.2",
     "html-webpack-plugin": "^5.6.3",
     "mini-css-extract-plugin": "^2.9.2",
     "webpack": "^5.98.0",
-    "webpack-cli": "^6.0.1",
-    "webpack-dev-server": "^5.2.0"
-  },
-  "scripts": {
-    "build": "webpack --mode production",
-    "start": "webpack serve --mode development"
+    "webpack-cli": "^6.0.1"
   }
 }
