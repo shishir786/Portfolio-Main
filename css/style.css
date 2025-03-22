@@ -1264,8 +1264,9 @@ span {
 }
 
 .contact form {
-  width: 70rem;
-  margin: 1rem auto;
+  max-width: 70rem;
+  width: 100%;
+  margin: 0 auto;
   text-align: center;
   margin-bottom: 3rem;
 }
@@ -1454,7 +1455,9 @@ span {
 /* //////// */
 
 .contact-links {
-  width: 70rem;
+  max-width: 70rem;
+  width: 100%;
+  margin: 0 auto;
   margin: 1rem auto;
   text-align: center;
   margin-bottom: 3rem;
