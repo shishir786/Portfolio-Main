@@ -1,7 +1,7 @@
 const CACHE_NAME = 'portfolio-v1';
 const ASSETS = [
   '/',
-  '/css/styles.css',
+  '/css/style.css',
   '/js/script.js',
   '/images/logo.png'
 ];
