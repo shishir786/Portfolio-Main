@@ -1261,6 +1261,7 @@ span {
 .contact h2 {
   margin-bottom: 3rem;
   text-align: center;
+  font-size: 5rem; /* Increased font size */
 }
 
 .contact form {
@@ -1310,7 +1311,7 @@ span {
   align-items: center;
   transform: scale(1.5);
   margin: 3rem 0;
-  padding-top: 2rem;
+  padding-top: 1.2rem;
   padding-bottom: 0.5rem;
 }
 .earth-loader {
