@@ -167,9 +167,12 @@ class CertificatesSection {
   }
 
   openModal(imageUrl, altText) {
-    this.modalImage.src = imageUrl;
-    this.modalImage.alt = altText;
-    this.modal.style.display = "block";
+    // Check if screen width is greater than 768px before opening the modal
+    if (window.innerWidth > 768) {
+      this.modalImage.src = imageUrl;
+      this.modalImage.alt = altText;
+      this.modal.style.display = "block";
+    }
   }
 
   setupModalEvents() {

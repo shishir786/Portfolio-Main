@@ -1314,17 +1314,12 @@ span {
   }
 }
 
-@media (max-width: 480px) {
-  .modal-content {
-    width: 95%; /* Slightly wider on mobile for better view */
-    margin: 20% auto; /* More margin for better spacing */
-  }
-
-  .modal-image {
-    max-width: 100%;
-    max-height: 70vh; /* Adjusted height for smaller screens */
+@media (max-width: 768px) {
+  .modal {
+    display: none !important; /* Completely hides the modal */
   }
 }
+
 /* ------------------------contact section ------------------------ */
 .contact_container {
   display: flex;
