@@ -363,78 +363,23 @@
 
 
     <!-- certifications design -->
+    <h2 class="heading">My <span>Certifications</span></h2>
+    <div class="certificates-container">
 
-    </div> -->
-    <div class="certifications-container">
-        <h2 class="heading">My <span>Certifications</span></h2>
+        <div id="certificatesGrid" class="certificates-grid">
+            <!-- Certificates will be dynamically added here -->
 
-        <div class="certifications-wrapper">
-            <div class="certifications-box mySwiper">
-                <div class="certifications-content swiper-wrapper">
-                    <!-- Certification 1 -->
-                    <div class="certifications-slide swiper-slide">
-                        <img src="images/certifications/jpMorgQR.jpg" alt="JPMorgan Chase QR Certification">
-                        <p class="certification-description">
-                            Completed a certification program on Quantum Risk Analysis from JPMorgan Chase.
-                        </p>
-                    </div>
-
-                    <!-- Certification 2 -->
-                    <div class="certifications-slide swiper-slide">
-                        <img src="images/certifications/DSgl.jpg" alt="Data Science Certification">
-                        <p class="certification-description">
-                            Certified in Data Science Fundamentals, covering data analysis, visualization, and machine
-                            learning.
-                        </p>
-                    </div>
-
-                    <!-- Certification 3 -->
-                    <div class="certifications-slide swiper-slide">
-                        <img src="images/certifications/javaCppPy.jpg" alt="Programming Languages Certification">
-                        <p class="certification-description">
-                            Proficient in Java, C++, and Python programming languages through advanced coursework.
-                        </p>
-                    </div>
-
-                    <!-- Certification 4 -->
-                    <div class="certifications-slide swiper-slide">
-                        <img src="images/certifications/cyberSec.jpg" alt="Cybersecurity Certification">
-                        <p class="certification-description">
-                            Certified in Cybersecurity Essentials, focusing on network security and threat mitigation.
-                        </p>
-                    </div>
-
-                    <!-- Certification 5 -->
-                    <div class="certifications-slide swiper-slide">
-                        <img src="images/certifications/sql.jpg" alt="SQL Certification">
-                        <p class="certification-description">
-                            Mastered SQL for database management, query optimization, and data retrieval.
-                        </p>
-                    </div>
-
-                    <!-- Certification 6 -->
-                    <div class="certifications-slide swiper-slide">
-                        <img src="images/certifications/word.jpg" alt="Microsoft Word Certification">
-                        <p class="certification-description">
-                            Certified in Microsoft Word for professional document creation and formatting.
-                        </p>
-                    </div>
-
-                    <!-- Certification 7 -->
-                    <div class="certifications-slide swiper-slide">
-                        <img src="images/certifications/excel.jpg" alt="Microsoft Excel Certification">
-                        <p class="certification-description">
-                            Advanced certification in Microsoft Excel, including data analysis and automation.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
-            </div>
         </div>
     </div>
+
+    <div id="certificateModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage" class="modal-image" src="" alt="Certificate">
+        </div>
+    </div>
+
+    <script src="js/certificates-data.js"></script>
 
 
     <!-- contact section design -->

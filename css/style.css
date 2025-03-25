@@ -1180,79 +1180,109 @@ span {
 }
 
 /* ------------------------certifications section ------------------------ */
-
-.certifications-container {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+.certificates-container {
+  max-width: 1350px; /* Slightly reduced width */
   width: 100%;
-  padding: 5rem 1rem;
+  margin: 2rem auto;
+  padding: 0 1rem;
 }
 
-.certifications-container .certifications-wrapper {
-  position: relative;
-  max-width: 80rem;
-  width: 100%;
-  padding: 5rem;
-}
-
-.certifications-wrapper .certifications-box {
-  padding: 1rem;
-  border-radius: 2rem;
-  overflow: hidden;
-}
-
-.certifications-content .certifications-slide {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  background: var(--bg-color);
-  border-radius: 2rem;
-  box-shadow: 0 0.1rem 0.5rem var(--shadow-color);
-  padding: 3rem 2rem; /* Reduced horizontal padding for better spacing */
-  border-top: 0.6rem solid var(--main-color);
-  border-bottom: 0.6rem solid var(--main-color);
-  border-left: 0.05rem solid rgb(210, 209, 209);
-  border-right: 0.05rem solid rgb(210, 209, 209);
-  text-align: center; /* Center-align text for descriptions */
-}
-
-.certifications-slide img {
-  height: auto; /* Adjusted to maintain aspect ratio */
-  width: 80%; /* Ensure images scale properly */
-  object-fit: cover;
-  margin-bottom: 1rem; /* Add space between image and description */
-}
-
-.certifications-slide .certification-description {
-  font-size: 1rem; /* Adjust font size for readability */
-  color: var(--text-color); /* Use a variable for consistent text color */
-  line-height: 1.5; /* Improve readability with proper line height */
-  margin: 0; /* Remove default margins */
-  padding: 0 1rem; /* Add horizontal padding for better spacing */
-}
-
-.certifications-box .swiper-button-next,
-.certifications-box .swiper-button-prev {
+.section-title {
+  text-align: center;
+  margin-bottom: 2rem;
   color: var(--main-color);
+  font-size: 2.5rem;
 }
 
-.certifications-box .swiper-button-next {
-  right: 0;
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    4,
+    minmax(220px, 1fr)
+  ); /* Slightly smaller grid */
+  gap: var(--grid-gap, 1rem); /* Reduced gap for compact layout */
 }
 
-.certifications-box .swiper-button-prev {
+.certificate-card {
+  /* background-color: var(--bg-light); */
+  background-color: var(--main-color);
+
+  border-radius: var(--card-border-radius, 8px);
+  box-shadow: 0 3px 5px var(--shadow-color);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.certificate-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px var(--shadow-color);
+}
+
+.certificate-image {
+  width: 100%;
+  height: var(--image-height, 220px);
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.certificate-details {
+  padding: 1rem;
+  text-align: center;
+}
+
+.certificate-title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.certificate-issuer {
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.certificate-date {
+  color: var(--text-color);
+  font-size: rem;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
   left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-.certifications-box .swiper-pagination-bullet {
-  background: rgba(49, 246, 88, 0.8);
+.modal-content {
+  margin: 10% auto;
+  max-width: 80%;
+  max-height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.certifications-box .swiper-pagination-bullet-active {
-  background: var(--main-color);
+.modal-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 
+.close-modal {
+  color: var(--white-color);
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
 /* ------------------------contact section ------------------------ */
 .contact_container {
   display: flex;
@@ -1892,19 +1922,6 @@ span {
 
   .projects .projects-container {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .certifications-container .certifications-wrapper {
-    padding: 5rem 0;
-  }
-
-  .certifications-content .certifications-slide {
-    padding: 3rem 2rem;
-  }
-
-  .certifications-box .swiper-button-next,
-  .certifications-box .swiper-button-prev {
-    display: none;
   }
 }
 

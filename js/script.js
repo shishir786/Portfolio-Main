@@ -1,5 +1,3 @@
-
-
 /*========== menu icon navbar ==========*/
 let menuIcon = document.querySelector("#menu-icon");
 let navbar = document.querySelector(".navbar");
@@ -43,20 +41,20 @@ window.onscroll = () => {
 
 /*========== swiper ==========*/
 
-var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 1,
-  spaceBetween: 50,
-  loop: true,
-  grabCursor: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
+// var swiper = new Swiper(".mySwiper", {
+//   slidesPerView: 1,
+//   spaceBetween: 50,
+//   loop: true,
+//   grabCursor: true,
+//   pagination: {
+//     el: ".swiper-pagination",
+//     clickable: true,
+//   },
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+// });
 
 /*========== dark light mode ==========*/
 let darkModeIcon = document.querySelector("#darkMode-icon");
@@ -77,7 +75,7 @@ ScrollReveal().reveal(".home-content, .heading, .contact-links", {
   origin: "top",
 });
 ScrollReveal().reveal(
-  ".home-img img, .services-container, .projects-box,.projects-box-Timer, .certifications-wrapper, .contact form, .skills-box",
+  ".home-img img, .services-container, .projects-box,.projects-box-Timer, .certificates-grid, .contact form, .skills-box",
   { origin: "bottom" }
 );
 ScrollReveal().reveal(".home-content h1, .about-img img", { origin: "left" });
@@ -122,3 +120,79 @@ async function handleSubmit(event) {
 }
 form.addEventListener("submit", handleSubmit);
 
+/* ============ certificates ============= */
+
+class CertificatesSection {
+  constructor(containerId, modalId, certificates) {
+    this.container = document.getElementById(containerId);
+    this.modal = document.getElementById(modalId);
+    this.modalImage = this.modal.querySelector(".modal-image");
+    this.certificates = certificates;
+
+    this.init();
+  }
+
+  init() {
+    this.renderCertificates();
+    this.setupModalEvents();
+  }
+
+  renderCertificates() {
+    this.container.innerHTML = ""; // Clear existing content
+
+    this.certificates.forEach((cert) => {
+      const card = this.createCertificateCard(cert);
+      this.container.appendChild(card);
+    });
+  }
+
+  createCertificateCard(cert) {
+    const card = document.createElement("div");
+    card.classList.add("certificate-card");
+
+    card.innerHTML = `
+            <img src="${cert.imageUrl}" alt="${cert.title}" class="certificate-image">
+            <div class="certificate-details">
+                <h3 class="certificate-title">${cert.title}</h3>
+                <p class="certificate-issuer">${cert.issuer}</p>
+                <p class="certificate-date">${cert.date}</p>
+            </div>
+        `;
+
+    card.addEventListener("click", () =>
+      this.openModal(cert.imageUrl, cert.title)
+    );
+
+    return card;
+  }
+
+  openModal(imageUrl, altText) {
+    this.modalImage.src = imageUrl;
+    this.modalImage.alt = altText;
+    this.modal.style.display = "block";
+  }
+
+  setupModalEvents() {
+    // Close modal when clicking the close button
+    const closeButton = this.modal.querySelector(".close-modal");
+    closeButton.addEventListener("click", () => {
+      this.modal.style.display = "none";
+    });
+
+    // Close modal when clicking outside the image
+    this.modal.addEventListener("click", (event) => {
+      if (event.target === this.modal) {
+        this.modal.style.display = "none";
+      }
+    });
+  }
+}
+
+// Initialize certificates section when DOM is fully loaded
+document.addEventListener("DOMContentLoaded", () => {
+  new CertificatesSection(
+    "certificatesGrid",
+    "certificateModal",
+    CERTIFICATES_DATA
+  );
+});
