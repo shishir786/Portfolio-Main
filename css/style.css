@@ -1283,6 +1283,33 @@ span {
   font-weight: bold;
   cursor: pointer;
 }
+
+@media (max-width: 1024px) {
+  .certificates-grid {
+    grid-template-columns: repeat(
+      3,
+      minmax(220px, 1fr)
+    ); /* 3 columns on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .certificates-grid {
+    grid-template-columns: repeat(
+      2,
+      minmax(220px, 1fr)
+    ); /* 2 columns on smaller tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .certificates-grid {
+    grid-template-columns: repeat(
+      1,
+      minmax(220px, 1fr)
+    ); /* 1 column on mobile */
+  }
+}
 /* ------------------------contact section ------------------------ */
 .contact_container {
   display: flex;
