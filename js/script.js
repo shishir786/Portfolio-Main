@@ -75,7 +75,7 @@ ScrollReveal().reveal(".home-content, .heading, .contact-links", {
   origin: "top",
 });
 ScrollReveal().reveal(
-  ".home-img img, .services-container, .projects-box,.projects-box-Timer, .certificates-grid, .contact form, .skills-box",
+  ".home-img img, .services-container, .projects-box,.projects-box-Timer, .certificates-grid, .contact form, .skills-box, .github-container, .github-container2, .github-box, .github-box2",
   { origin: "bottom" }
 );
 ScrollReveal().reveal(".home-content h1, .about-img img", { origin: "left" });
