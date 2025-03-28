@@ -1,7 +1,13 @@
 const CERTIFICATES_DATA = [
   {
-    title: "Quantitative Research Job Simulation",
-    issuer: "Forage - JPMorgan Chase & Co.",
+    title: "Accenture North America - Project Management Job Simulation",
+    issuer: "Forage",
+    date: "March, 2025",
+    imageUrl: "images/certifications/accenture.jpg",
+  },
+  {
+    title: "JPMorgan Chase & Co. - Quantitative Research Job Simulation",
+    issuer: "Forage",
     date: "December, 2024",
     imageUrl: "images/certifications/jpMorgQR.jpg",
   },
