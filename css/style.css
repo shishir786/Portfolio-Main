@@ -555,7 +555,7 @@ span {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 2.5rem;
-  padding: 0 9%;
+  padding: 0 1%; /* Reduced padding for a narrower container */
 }
 
 .skills-box {
@@ -591,7 +591,7 @@ span {
 @media (max-width: 768px) {
   .skills-container {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    padding: 0 4%;
+    padding: 0 3%; /* Further reduced padding for smaller screens */
   }
 
   .skills-box {
@@ -607,7 +607,7 @@ span {
   }
 }
 
-/* GitHub Stats Section */
+/* ---------------------github part in services sectiom --------------------- */
 .github-container {
   display: flex;
   flex-direction: row; /* Stack elements vertically */
