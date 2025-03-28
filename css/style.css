@@ -607,6 +607,45 @@ span {
   }
 }
 
+/* GitHub Stats Section */
+/* GitHub Stats Section */
+.github-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px; /* More space between elements */
+  margin-top: 40px;
+}
+
+/* Individual GitHub Box */
+.github-box {
+  width: 100%;
+  max-width: 600px; /* Increased width */
+  height: 300px; /* Increased height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a1a1a; /* Dark background */
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  padding: 15px;
+}
+
+/* GitHub Images */
+.github-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures uniform size */
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.github-box img:hover {
+  transform: scale(1.05);
+}
+
 /* ------------------------project section ------------------------ */
 
 .projects {
