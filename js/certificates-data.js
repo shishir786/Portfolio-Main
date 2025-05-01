@@ -1,3 +1,4 @@
+// This file contains the data for the certificates section of the portfolio
 const CERTIFICATES_DATA = [
   {
     title: "Accenture North America - Project Management Job Simulation",

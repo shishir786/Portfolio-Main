@@ -120,7 +120,7 @@ async function handleSubmit(event) {
 }
 form.addEventListener("submit", handleSubmit);
 
-/* ============ certificates ============= */
+/* ============ certificates ============== */
 
 class CertificatesSection {
   constructor(containerId, modalId, certificates) {
