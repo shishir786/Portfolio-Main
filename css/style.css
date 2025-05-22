@@ -427,15 +427,21 @@ section {
   border-left: 384px solid transparent;
 }
 
-.home-img img {
+.home-img {
   position: absolute;
-  bottom: -37px;
-  right: -50px;
-  width: auto; /* Changed from 100% to auto */
-  max-height: 90vh; /* Added to maintain viewport height */
-  max-width: 50%; /* Added to prevent image from being too wide */
-  object-fit: contain; /* Added to maintain aspect ratio */
+  bottom: 25px;
+  right: -85px;
+  width: auto;
+  max-height: 90vh;
+  max-width: 50%;
+  object-fit: contain;
   pointer-events: none;
+}
+
+.home-img img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 /* ------------------------about section ------------------------ */
@@ -648,37 +654,32 @@ span {
 
 /* GitHub Container */
 .github-container2 {
-  width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  margin-top: 2rem;
 }
 
 /* Full Width & Slim Height for Activity Graph */
 .github-box2 {
   width: 100%;
-  max-width: 100vw; /* Full width */
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #1a1a1a;
-  border-radius: 10px;
-  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
-  overflow: hidden;
-  padding: 10px;
+  background: var(--bg-color);
+  border-radius: 2rem;
+  box-shadow: 0 0 1rem var(--main-color);
+  padding: 1rem;
+  text-align: center;
+  transition: 0.5s ease;
 }
 
-/* GitHub Image */
+.github-box2:hover {
+  box-shadow: 0 0 1rem var(--main-color);
+}
+
 .github-box2 img {
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* Crop and fit image */
-  border-radius: 5px;
-}
-.github-box2 img:hover {
-  transform: scale(1.05);
+  height: auto;
+  border-radius: 1rem;
 }
 
 /* Responsive Adjustments */
@@ -1328,6 +1329,33 @@ span {
   font-size: rem;
 }
 
+@media (max-width: 1024px) {
+  .certificates-grid {
+    grid-template-columns: repeat(
+      3,
+      minmax(220px, 1fr)
+    ); /* 3 columns on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .certificates-grid {
+    grid-template-columns: repeat(
+      2,
+      minmax(220px, 1fr)
+    ); /* 2 columns on smaller tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .certificates-grid {
+    grid-template-columns: repeat(
+      1,
+      minmax(220px, 1fr)
+    ); /* 1 column on mobile */
+  }
+}
+
 .modal {
   display: none;
   position: fixed;
@@ -1885,9 +1913,9 @@ span {
     position: fixed;
     top: 0;
     left: 40%;
-    transform: translateX(-50%); /* Center the header */
-    width: 90%; /* Reduced from 100% */
-    max-width: none; /* Add maximum width */
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: none;
     padding: 2rem 9%;
     background: transparent;
 
@@ -1899,8 +1927,8 @@ span {
   }
 
   #darkMode-icon {
-    position: relative; /* Change from absolute to relative */
-    right: 0; /* Remove right positioning */
+    position: relative;
+    right: 0;
     font-size: 2.6rem;
     color: var(--text-color);
     margin-bottom: 0.1rem;
@@ -2040,6 +2068,24 @@ span {
 
   .projects .projects-container {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .github-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .github-box {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .github-container2 {
+    gap: 1.5rem;
+  }
+  
+  .github-box2 {
+    padding: 0.8rem;
   }
 }
 

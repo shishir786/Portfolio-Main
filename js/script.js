@@ -68,19 +68,94 @@ darkModeIcon.onclick = () => {
 ScrollReveal({
   reset: true,
   distance: "80px",
-  duration: 2000,
-  delay: 200,
+  duration: 1500,
+  delay: 100,
+  easing: "cubic-bezier(0.5, 0, 0, 1)",
+  interval: 100
 });
-ScrollReveal().reveal(".home-content, .heading, .contact-links", {
+
+// Home section
+ScrollReveal().reveal(".home-content", {
   origin: "top",
+  interval: 100
 });
-ScrollReveal().reveal(
-  ".home-img img, .services-container, .projects-box,.projects-box-Timer, .certificates-grid, .contact form, .skills-box, .github-container, .github-container2, .github-box, .github-box2",
-  { origin: "bottom" }
-);
-ScrollReveal().reveal(".home-content h1, .about-img img", { origin: "left" });
-ScrollReveal().reveal(".home-content h3, .home-content p, .about-content", {
+
+// Add specific animation for home image
+ScrollReveal().reveal(".home-img", {
+  origin: "bottom",
+  distance: "100px",
+  duration: 1500,
+  delay: 200,
+  easing: "cubic-bezier(0.5, 0, 0, 1)"
+});
+
+// About section
+ScrollReveal().reveal(".about-img img", {
+  origin: "left",
+  interval: 100
+});
+ScrollReveal().reveal(".about-content", {
   origin: "right",
+  interval: 100
+});
+
+// Services section
+ScrollReveal().reveal(".services-container", {
+  origin: "bottom",
+  interval: 100
+});
+
+// Projects section
+ScrollReveal().reveal(".projects-box, .projects-box-Timer", {
+  origin: "bottom",
+  interval: 100
+});
+
+// Certificates section
+ScrollReveal().reveal(".certificates-grid", {
+  origin: "bottom",
+  interval: 100
+});
+
+// Contact section
+ScrollReveal().reveal(".contact h2", {
+  origin: "top",
+  distance: "100px",
+  duration: 1500,
+  delay: 100
+});
+
+ScrollReveal().reveal(".contact form", {
+  origin: "bottom",
+  distance: "100px",
+  duration: 1500,
+  delay: 200
+});
+
+ScrollReveal().reveal(".contact-links", {
+  origin: "top",
+  distance: "100px",
+  duration: 1500,
+  delay: 300
+});
+
+ScrollReveal().reveal(".earth", {
+  origin: "bottom",
+  distance: "100px",
+  duration: 1500,
+  delay: 400
+});
+
+// Skills section
+ScrollReveal().reveal(".skills-box", {
+  origin: "bottom",
+  interval: 100
+});
+
+// GitHub section
+ScrollReveal().reveal(".github-container, .github-container2, .github-box, .github-box2", {
+  origin: "bottom",
+  interval: 100
 });
 
 /* ============ form submission ============= */
