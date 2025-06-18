@@ -1,6 +1,12 @@
 // This file contains the data for the certificates section of the portfolio
 const CERTIFICATES_DATA = [
   {
+    title: "Data Analyst Certification",
+    issuer: "oneroadmap.io",
+    date: "June, 2025",
+    imageUrl: "images/certifications/dataAnalysis.jpg",
+  },
+  {
     title: "Accenture North America - Project Management Job Simulation",
     issuer: "Forage",
     date: "March, 2025",
