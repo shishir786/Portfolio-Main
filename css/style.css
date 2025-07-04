@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 /*  */
 * {
@@ -9,7 +9,7 @@
   border: none;
   outline: none;
   scroll-behavior: smooth;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 :root {
@@ -89,7 +89,7 @@ body {
 .spinner::before {
   box-sizing: border-box;
   position: absolute;
-  content: "";
+  content: '';
   width: var(--size);
   height: var(--size);
   top: 50%;
@@ -169,7 +169,7 @@ body {
 }
 
 .navbar a.active::before {
-  content: "";
+  content: '';
 
   position: absolute;
   left: 0;
@@ -296,7 +296,7 @@ section {
 
 /* Arrow for tooltip */
 .home-content .social-media a.tooltip .tooltiptext::after {
-  content: ""; /* Required for pseudo-element */
+  content: ''; /* Required for pseudo-element */
   position: absolute;
   top: 100%; /* Position at the bottom of the tooltip */
   left: 50%; /* Center horizontally */
@@ -730,13 +730,14 @@ span {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
-  color: var(--white-color);
+  background: linear-gradient(rgba(0, 0, 0, 0.7), var(--main-color));
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  padding: 2rem 2rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  padding: 0 4rem;
   opacity: 0;
   transition: 0.5s ease;
 }
@@ -750,8 +751,10 @@ span {
 }
 
 .projects-layer p {
-  font-size: 1.6rem;
-  margin: 0.3rem 0 1rem;
+  font-size: 1.8rem;
+  margin: 0.8rem 0 1.2rem;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 .projects-layer a {
@@ -892,7 +895,7 @@ span {
 
 .hourglassGlass:before,
 .hourglassGlass:after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   background-color: #999999;
@@ -913,7 +916,7 @@ span {
 
 .hourglassCurves:before,
 .hourglassCurves:after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   top: 32px;
@@ -977,7 +980,7 @@ span {
 }
 
 .hourglassSandStream:before {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   left: 24px;
@@ -988,7 +991,7 @@ span {
 }
 
 .hourglassSandStream:after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   top: 36px;
@@ -1107,7 +1110,7 @@ span {
 
 .hourglassSand:before,
 .hourglassSand:after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   left: 6px;
@@ -1278,10 +1281,7 @@ span {
 
 .certificates-grid {
   display: grid;
-  grid-template-columns: repeat(
-    4,
-    minmax(220px, 1fr)
-  ); /* Slightly smaller grid */
+  grid-template-columns: repeat(4, minmax(220px, 1fr)); /* Slightly smaller grid */
   gap: var(--grid-gap, 1rem); /* Reduced gap for compact layout */
 }
 
@@ -1331,28 +1331,19 @@ span {
 
 @media (max-width: 1024px) {
   .certificates-grid {
-    grid-template-columns: repeat(
-      3,
-      minmax(220px, 1fr)
-    ); /* 3 columns on tablets */
+    grid-template-columns: repeat(3, minmax(220px, 1fr)); /* 3 columns on tablets */
   }
 }
 
 @media (max-width: 768px) {
   .certificates-grid {
-    grid-template-columns: repeat(
-      2,
-      minmax(220px, 1fr)
-    ); /* 2 columns on smaller tablets */
+    grid-template-columns: repeat(2, minmax(220px, 1fr)); /* 2 columns on smaller tablets */
   }
 }
 
 @media (max-width: 480px) {
   .certificates-grid {
-    grid-template-columns: repeat(
-      1,
-      minmax(220px, 1fr)
-    ); /* 1 column on mobile */
+    grid-template-columns: repeat(1, minmax(220px, 1fr)); /* 1 column on mobile */
   }
 }
 
@@ -1398,28 +1389,19 @@ span {
 
 @media (max-width: 1024px) {
   .certificates-grid {
-    grid-template-columns: repeat(
-      3,
-      minmax(220px, 1fr)
-    ); /* 3 columns on tablets */
+    grid-template-columns: repeat(3, minmax(220px, 1fr)); /* 3 columns on tablets */
   }
 }
 
 @media (max-width: 768px) {
   .certificates-grid {
-    grid-template-columns: repeat(
-      2,
-      minmax(220px, 1fr)
-    ); /* 2 columns on smaller tablets */
+    grid-template-columns: repeat(2, minmax(220px, 1fr)); /* 2 columns on smaller tablets */
   }
 }
 
 @media (max-width: 480px) {
   .certificates-grid {
-    grid-template-columns: repeat(
-      1,
-      minmax(220px, 1fr)
-    ); /* 1 column on mobile */
+    grid-template-columns: repeat(1, minmax(220px, 1fr)); /* 1 column on mobile */
   }
 }
 
@@ -1499,8 +1481,7 @@ span {
   position: relative;
   overflow: hidden;
   border-radius: 50%;
-  box-shadow: inset 0em 0.5em rgb(255, 255, 255, 0.25),
-    inset 0em -0.5em rgb(0, 0, 0, 0.25);
+  box-shadow: inset 0em 0.5em rgb(255, 255, 255, 0.25), inset 0em -0.5em rgb(0, 0, 0, 0.25);
   border: solid 0.15em white;
   animation: startround 1s;
   animation-iteration-count: 1;
@@ -1514,7 +1495,7 @@ span {
   align-items: center;
   padding-top: 0.25em;
   font-size: 1.25em;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .earth-loader svg:nth-child(1) {
@@ -1558,8 +1539,7 @@ span {
   }
   100% {
     filter: brightness(100%);
-    box-shadow: inset 0em 0.5em rgb(255, 255, 255, 0.25),
-      inset 0em -0.5em rgb(0, 0, 0, 0.25);
+    box-shadow: inset 0em 0.5em rgb(255, 255, 255, 0.25), inset 0em -0.5em rgb(0, 0, 0, 0.25);
   }
 }
 
@@ -1736,7 +1716,7 @@ span {
   font-size: 1.6rem;
   color: var(--white-color);
 }
-/* 
+/*
 .footer-iconTop a {
   display: inline-flex;
   justify-content: center;
@@ -1801,7 +1781,7 @@ span {
 .button::before {
   position: absolute;
   bottom: -20px;
-  content: "Back to Top";
+  content: 'Back to Top';
   color: white;
   /* transition-duration: .3s; */
   font-size: 0px;
@@ -2074,16 +2054,16 @@ span {
     flex-direction: column;
     gap: 2rem;
   }
-  
+
   .github-box {
     max-width: 100%;
     height: auto;
   }
-  
+
   .github-container2 {
     gap: 1.5rem;
   }
-  
+
   .github-box2 {
     padding: 0.8rem;
   }
